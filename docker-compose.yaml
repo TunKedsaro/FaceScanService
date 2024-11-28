@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  get_service:
+    build:
+      context: ./Get_folder
+    ports:
+      - "8080:8080"
+
+  faceinputauth_service:
+    build:
+      context: ./FaceInputAuth
+    ports:
+      - "8081:8081" 
