@@ -27,10 +27,10 @@ def start_server():
         print(f"Received data: {data}")  # Debugging line
         
         # Parse and process the data
-        num1, num2 = map(float, data.split(","))
-        result = num1 + num2
+        h,w,c = map(float, data.split(","))
+        result = f"{h},{w},{c}"
         # 06 Close mode
-        client_socket.sendall(str(result).encode())
+        client_socket.sendall(result.encode())
         client_socket.close()
 
 
